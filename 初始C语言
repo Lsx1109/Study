@@ -139,7 +139,7 @@
 //	printf("max =%d\n", max);
 //	return 0;
 //}
-int main()
+int main()//~
 {
 	int a = 0;//整形占用4个字节，32bit位
 	int b = ~a;//~按（2进制）位取反
@@ -148,4 +148,30 @@ int main()
 	//负数在内存中存储的时候，存储的是二进制的补码
 	return 0;
 }
-
+int main()//++和--
+{
+	int a = 10;
+	//int b = a++;//后置++，先使用，再++
+	//printf("a = %d b = %d\n", a, b);//a = 11 b = 10
+	//int b = ++a;//前置++，先++，再使用
+	//printf("a = %d b = %d\n", a, b);//a = 11  b = 11
+	//int b = a--;
+	//printf("a = %d b = %d\n", a, b);//a = 9  b = 10
+	int b = --a;
+	printf("a = %d b = %d\n", a, b);//a = 9  b = 9
+	return 0;
+}
+int main()//强制类型转化（ ）
+{
+	int a = (int)3.14;
+	return 0;
+}
+int main()
+{   
+	//真：非0  假：0  &&：逻辑与  ||:逻辑或
+	int a = 3;
+	int b = 5;
+	int c = a&&b;
+	printf("c = %d\n", c);
+	return 0;
+}
