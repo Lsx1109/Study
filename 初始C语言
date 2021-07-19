@@ -102,9 +102,9 @@
 //}
 //int main()
 //{
-//	/*int a = 10;
+//	int a = 10;
 //	printf("%d\n", sizeof(a));
-//	printf("%d\n", sizeof a);*/
+//	printf("%d\n", sizeof a);//printf("%d\n", sizeof(int));必须加（）
 //	int arr[10] = { 0 };
 //	int sz = 0;
 //	printf("%d\n", sizeof(arr));
@@ -139,4 +139,13 @@
 //	printf("max =%d\n", max);
 //	return 0;
 //}
+int main()
+{
+	int a = 0;//整形占用4个字节，32bit位
+	int b = ~a;//~按（2进制）位取反
+	//1010 按位取反 0101
+	printf("%d\n", b);
+	//负数在内存中存储的时候，存储的是二进制的补码
+	return 0;
+}
 
