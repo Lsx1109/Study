@@ -175,3 +175,32 @@ int main()
 	printf("c = %d\n", c);
 	return 0;
 }
+int main()//exp1 ? exp2 : exp3; 
+{   
+	int a = 10;
+	int b = 20;
+	int max = 0;
+	max = (a > b ? a : b);
+	printf("%d\n", max);
+	return 0;
+}
+int Add(int x, int y)
+{
+	int z = 0;
+	z = x + y;
+	return z;
+}
+int main()//exp1 ? exp2 : exp3; 
+{   
+	//int arr[10] = { 0 };
+	//arr[4];//[]：下标引用操作符
+	int a = 10;
+	int b = 20;
+	int sum = Add(a, b);//( )：函数调用操作符
+	return 0;
+}
+
+
+
+
+
