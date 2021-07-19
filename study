@@ -1,1 +1,142 @@
-int main()
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<string.h>
+//int main()
+//{
+//	int input = 0;
+//	printf("加入比特\n");
+//	printf("你要好好学习吗?(1/0)>:");
+//	scanf("%d", &input);
+//	if (input == 7)
+//		printf("好offer\n");
+//	else
+//		printf("卖红薯\n");
+//	
+//	return 0;
+//}
+//int main()
+//{
+//	int line = 0;
+//	printf(" 加入比特\n");
+//	while (line<20000)
+//	{
+//		printf("敲一行代码:%d\n",line);
+//		line++;
+//	}
+//	if (line>=20000)
+//	printf("好offer");
+//	return 0;
+//}
+//int Add(int x, int y)
+//{
+//	int z = x + y;
+//	return z;
+//}
+//int main()
+//{
+//	int a = 12;
+//	int b = 2;
+//	int c = 1;
+//	int d = 2;
+//	int sum1 = c + d;
+//	int sum = a + b;
+//	sum1 = Add(a, b);
+//	sum = Add(c, d);
+//	printf("sum1 = %d\n", sum1);
+//	printf("sum = %d\n", sum);
+//	return 0;
+//}
+//int main()
+//{
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };//定义存放10个整数数字的数组
+//	//0-9
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		printf("%d\n", arr[i]);
+//		i++;
+//	}
+//	/*char ch[20];
+//	float arr2[5];*/
+//	//arr[下标]
+//	//printf("%d\n", arr[0]);//下表方式访问元素
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 5 % 2;//取模，余数
+//	printf("%d\n", a);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 1;//整数1占一个字节 32bit位
+//	int b = a << 1;
+//	printf("%d\n", b);
+//	return 0;
+//}
+//int main()
+//{
+//	//&与 |或 ^异或
+//	int a = 3;
+//	int b = 5;
+//	int c = a^b;//异或计算规律，同0，异1
+//	printf("%d\n", c);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;//=赋值  ==判断
+//	a += 10;//等价 a = a + 10
+//	a &= 10;//等价 a = a & 10
+//	printf("%d\n", a);
+//	return 0;
+//}
+//int main()//单目操作符
+//{
+//	//0假  非0真
+//	int a = 0;
+//	printf("%d\n", a);
+//	printf("%d\n", !a);
+//	return 0;
+//}
+//int main()
+//{
+//	/*int a = 10;
+//	printf("%d\n", sizeof(a));
+//	printf("%d\n", sizeof a);*/
+//	int arr[10] = { 0 };
+//	int sz = 0;
+//	printf("%d\n", sizeof(arr));
+//	//计算数组的元素个数，个数=数组总大小/每个元素大小
+//	sz = sizeof(arr) / sizeof(arr[0]);
+//	printf("sz = %d\n", sz);
+//	return 0;
+//}
+//int main()//求两个数最大值
+//{
+//	int a = 1;
+//	int b = 2;
+//	if (a > b)
+//		printf("较大值为:%d", a);
+//	else
+//		printf("较大值为:%d", b);
+//	return 0;
+//}
+//int Max(int x, int y)
+//{
+//	if (x > y)
+//		return x;
+//	else
+//		return y;
+//}
+//int main()//求两个数最大值
+//{
+//	int a = 1;
+//	int b = 2;
+//	int max = 0;
+//	max = Max(a, b);
+//	printf("max =%d\n", max);
+//	return 0;
+//}
+
