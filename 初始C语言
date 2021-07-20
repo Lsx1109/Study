@@ -199,6 +199,37 @@ int main()//exp1 ? exp2 : exp3;
 	int sum = Add(a, b);//( )：函数调用操作符
 	return 0;
 }
+int main()
+{
+	//typedef 类型定义
+	typedef unsigned int u_int;
+	unsigned int num = 20;
+	u_int num2 = 20;
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
