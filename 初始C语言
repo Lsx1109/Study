@@ -207,7 +207,7 @@ int main()
 	u_int num2 = 20;
 	return 0;
 }
-void test()
+void test()//static修饰局部变量，局部变量生命周期变长
 {
 	static int a = 1;//a是一个静态的局部变量 
 	a++;
@@ -223,6 +223,17 @@ void test()
 	}
 	 return 0;
   } 
+  //声明外部函数
+  extern int Add(int,int);
+ 
+ 
+ #include <stdio.h>
+#define MAX 100//defind 定义标识符常量 
+int main ()
+{
+	int a = MAX; 
+	return 0;
+}
 
 
 
