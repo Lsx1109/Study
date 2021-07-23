@@ -207,6 +207,22 @@ int main()
 	u_int num2 = 20;
 	return 0;
 }
+void test()
+{
+	static int a = 1;//a是一个静态的局部变量 
+	a++;
+	printf("a = %d\n",a);
+ } 
+ int main()
+ {
+ 	int i = 0;
+ 	while (i<5)
+ 	{
+ 		test ();
+ 		i++;
+	}
+	 return 0;
+  } 
 
 
 
