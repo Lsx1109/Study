@@ -275,8 +275,30 @@ int main()
 	//printf("%c\n", ch);
 	return 0;
 }
-
-
+int main()
+{
+	double d = 3.14;
+	double* pd = &d;
+	*pd = 5.5;
+	printf("%lf\n", d);
+	printf("%d\n", sizeof(pd));
+	return 0;
+	//int a = 10;
+	////printf("%p\n", &a);
+	//int* p = &a;//p是一个变量——指针变量
+	////printf("%p\n", p);
+	//*p = 20;//*——解引用操作符/间接访问操作符
+	//printf("%d\n", a);
+	//return 0; 
+}
+int main()
+{
+	printf("%d\n", sizeof(char*));
+	printf("%d\n", sizeof(short*));
+	printf("%d\n", sizeof(int*));
+	printf("%d\n", sizeof(double*));
+	return 0;
+}//都是4
 
 
 
