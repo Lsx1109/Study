@@ -301,6 +301,38 @@ int main()
 }//都是4
 
 
+#include <stdio.h>
+#include <string.h>
+#define _CRT_SECURE_NO_WARNINGS 1
+
+struct book
+{
+	char name[20];//c语言
+	short price;//25
+};
+int main()
+{
+	//利用结构体类型-创建一个该类型的结构体变量
+	struct book b1 = { "c语言", 25 };
+	strcpy_s(b1.name, "C++");//strcpy-string copy - 字符串拷贝-库函数-string.h
+		printf("%s\n", b1.name);
+	//利用pb打印
+	//.  结构体变量.成员
+	//-> 结构体指针->成员
+	//struct book* pb = &b1;
+	//printf("书名:%s\n", pb->name);
+	//printf("价格:%d\n", pb->price);
+	//printf("书名:%s\n", (*pb).name);
+	//printf("价格:%d\n", (*pb).price);
+	//利用pb打印书名和价格
+	/*printf("书名:%s\n", b1.name);
+	printf("价格:%d元\n", b1.price);
+	b1.price = 15;
+	printf("修改后的价格:%d\n", b1.price);*/
+	return 0;
+}
+
+
 
 
 
