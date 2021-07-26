@@ -14,7 +14,10 @@ int main()
 {
 	int age = 100;
 	if (age < 18)
-		printf("未成年\n");
+	    {
+	    printf("未成年\n");
+	    printf("不能谈恋爱\n");
+	    }
 	else
 	{
 	    if (age >= 18 && age < 28)
