@@ -63,6 +63,20 @@ int main()
 }
 
 
+int main()
+{
+	int num = 4;
+	if (5 == num)
+	{
+		printf("hehe\n");
+	}
+	//if (num = 5)// = 赋值 ， == 判断相等
+	//{
+	//	printf("hehe\n");
+	//}
+}
+
+
 
 
 
