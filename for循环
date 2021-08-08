@@ -1,1 +1,21 @@
+int main()
+{
+	int i = 0;//初始化
+	while (i<10)//判断
+	{
+		i++;//调整
+	}
+	return 0;
+}
 
+
+
+int main()
+{
+	int i = 0;
+	for (i = 1; i <= 10; i++)
+	{
+		printf("%d\n", i);
+	}
+	return 0;
+}
