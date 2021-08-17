@@ -1,4 +1,8 @@
 不可再for循环内修改循环变量，防止for循环失去控制
+建议for语句的循环控制变量的取值采用“前闭后开”写法
+
+1.for循环的初始化、调整、判断都可省略
+但是：for循环的判断部分被省略，那判断条件就是：恒为真
 
 int main()
 {
@@ -47,6 +51,18 @@ int main()
 			printf("haha\n");
 		}
 		printf("hehe\n");
+	}
+	return 0;
+}
+
+
+int main()
+{
+	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf(",%d", arr[i]);
 	}
 	return 0;
 }
