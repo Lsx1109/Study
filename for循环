@@ -24,7 +24,23 @@ for (int i = 0; i < 26; i += 2)
 cout << endl;
 cout << i; //i = 5
 
-
+for循环结构里的“表达式1”和“表达式3”都是可以用逗号连接的若干个表达式
+for（int i = 15， j = 0; i > j; i -= 2 ,j += 3)
+    cout << i << "," << j << endl;
+    
+输入一个正整数n，从小到大输出它所有因子
+int n;
+cin >> n;
+for (int i = 1; i <= n; ++i)
+    if (n%i==0)
+        cout << i << endl;
+从大到小
+int n;
+cin >> n;
+for (int i = n; i >= 1; --i)
+    if (n%i==0)
+	cout << i << endl;
+    
 int main()
 {
 	int i = 0;
