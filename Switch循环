@@ -1,3 +1,18 @@
+switch(表达式) //表达式类型必须为整数类型（int，char...)
+{
+       case 常量表达式1：//常量表达式类型必须为整数类型（int，char...)
+            语句组1
+            break;
+        case 常量表达式2:
+             语句组2
+             break;
+       ...
+       case 常量表达式n：
+            语句组n
+            break；
+       default:
+            语句组n+1
+       
 int main()
 {
 	int age = 20;
