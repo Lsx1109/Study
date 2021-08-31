@@ -1,1 +1,14 @@
-
+1.描述：对于半径为r的球，V=4/3πr²,π取3.14。现给定r求V。
+输入：输入不超过100非负实数r，类型为double
+输出：输出V保留2位小数
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{
+	double r;
+	scanf_s("%lf", &r);
+	double V = 4 / 3.0 * 3.14 * r * r * r;
+	printf("%.2f", V); 
+	return 0;
+}
