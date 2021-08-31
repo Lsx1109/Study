@@ -1,6 +1,9 @@
-1.描述：对于半径为r的球，V=4/3πr²,π取3.14。现给定r求V。
-输入：输入不超过100非负实数r，类型为double
-输出：输出V保留2位小数
+描述
+对于半径为r的球，V=4/3πr²,π取3.14。现给定r求V。
+输入
+输入不超过100非负实数r，类型为double
+输出
+输出V保留2位小数
 #include<iostream>
 #include<cstdio>
 using namespace std;
@@ -12,3 +15,98 @@ int main()
 	printf("%.2f", V); 
 	return 0;
 }
+
+描述
+读入三个整数，按每个整数占8个字符的宽度，右对齐输出它们。
+输入
+只有一行，包含三个整数，整数之间以一个空格分开。
+输出
+只有一行，按照格式要求依次输出三个整数，之间以一个空格分开。
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{
+	int a,b,c;
+	scanf("%d %d %d",&a,&b,&c);
+	printf("%8d %8d %8d",a,b,c);
+	return 0;
+	
+ } 
+
+描述
+读入一个双精度浮点数，保留12位小数，输出这个浮点数。
+输入
+只有一行，一个双精度浮点数。
+输出
+也只有一行，保留12位小数的浮点数。
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{
+	double x;
+	scanf_s("%lf", &x);
+	printf("%.12f", x);
+	return 0;
+}
+
+描述
+读入一个字符，一个整数，一个单精度浮点数，一个双精度浮点数，然后按顺序输出它们，并且要求在他们之间用一个空格分隔。输出浮点数时保留6位小数。
+输入
+共有四行：
+第一行是一个字符；
+第二行是一个整数；
+第三行是一个单精度浮点数；
+第四行是一个双精度浮点数。
+输出
+输出字符、整数、单精度浮点数和双精度浮点数，之间用空格分隔。
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{
+	char a;
+	int b;
+	float c;
+	double d;
+	scanf("%c %d %f %lf",&a,&b,&c,&d);
+	printf("%c %d %.6f %.6f",a,b,c,d);
+	return 0;
+}
+
+描述
+一只大象口渴了，要喝20升水才能解渴，但现在只有一个深h厘米，底面半径为r厘米的小圆桶(h和r都是整数)。问大象至少要喝多少桶水才会解渴。
+输入
+输入有一行：包含两个整数，以一个空格分开，分别表示小圆桶的深h和底面半径r，单位都是厘米。
+输出
+输出一行，包含一个整数，表示大象至少要喝水的桶数。
+#include<iostream>
+#include<cstdio>
+#define Pi 3.14159
+using namespace std;
+int main()
+{
+	int h, r, num;
+	double v;
+	scanf_s("%d %d", &h, &r);
+	v = (Pi * r * r * h)/1000;
+	num = 20 / v + 1;
+	printf("%d", num);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
