@@ -1,0 +1,27 @@
+scanf(...)表达式的值为int，表示成功读入的变量个数。
+int n，m;
+printf ( "%d" , scanf ( "%d%d" , &n , &m)) ;//输入a 40 输出0
+
+scanf(..)值为EOF(即-1)则说明输入数据已经结束
+int n,m;
+while(scanf("%d%d",&n,&m) !=EOF//或==2) {//EOF是直接拿来用的常量符号
+    printf("%d",n+m);
+}
+
+cin >> m >> n ... 表达式的值，在成功读入所有变量时为true，否则为false
+int n,m;
+while( cin >> n >> m ) {
+    printf("%d",n+m);
+}
+
+windows系统下，不停输入两个整数再敲回车，
+则不停输出它们的和，直到在单独一行输入Ctr1+Z然后回车,程序结束(单独一行的ctr1+Z表示输入结束)
+
+
+输入若干正整数，输出最大值
+	int n, max = 0; 
+	while (scanf_s("%d", &n)//cin << n !=EOF){
+		if (n > max)
+			max = n;
+	}
+	printf("%d", max);
