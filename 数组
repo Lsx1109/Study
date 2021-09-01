@@ -1,0 +1,78 @@
+int a[100];
+名字为a的数组，有100个元素，每个元素都是int变量
+
+T a[N];         //T为类型名，如char，int等
+                //N为正整数或值为正整数的常量表达式
+数组a有N个元素，每个元素都是类型为T的变量。
+N个元素在内存里是一个挨一个连续存放的。
+a数组占用大小总共为 N × sizeof(T)字节的储存空间
+sizeof(a)的值为整个数组的体积，即N × sizeof(T)
+
+数组下标从0开始，N个元素的数组，下标从0至N-1
+
+数组名a代表数组的地址，假设为p，则变量a[i]的地址就是p+i*sizeof(int)
+
+例题：接受键盘输入的100个整数，然后将他们按和原顺序相反的顺序输出
+#include<iostream>
+#include<cstdio>
+using namespace std;
+#define num 100
+int a[num];//数组一般不定义在main中，尤其是大数组
+int main(){
+	for (int i = 0; i < num; ++i)
+		cin >> a[i];
+	for (int i = num - 1; i >= 0; --i)
+		cout << a[i] << " ";
+	return 0;
+}
+
+数组的初始化：定义一个一维数组的同时，就可以给数组中的元素赋初值
+类型名  数组名[常量表达式]={...};
+{}中的各数据值即为各元素的初值，值之间用逗号间隔
+int a[10]={0,1,2,3,4,5,6,7,8,9};
+效果：a[0]=0;a[1]=1...a[9]=9
+
+数组初始化时，{}中值的个数可以少于元素个数。相当于只给前面部分元素赋值，而后面的元素，其存储空间里的每个字节都被写入二进制数0;
+int a[10]={0,1,2,3,4};
+只给a[0]~a[4]赋值，后5个自动赋值0
+
+定义数组的时候，如给全部元素赋值，则可以不给出数组元素的个数：
+int a[]={1,2,3,4,5};
+
+数组取代复杂分支结构：用数组存放一些固定不变的值，以取代复杂的分支结构
+#include<iostream>
+#include<string>
+using namespace std;
+string weekdays[] = { "monday", "tuesday", "wednesday", "thuesday", "firday",
+"saturday","sunday"};
+//string是字符串类型，可存放字符串常量
+int main()
+{
+	int n;
+	cin >> n;
+	if (n > 7 || n < 1)
+		cout << "illegal";
+	else
+		cout << weekdays[n - 1];
+	return 0;
+
+
+数组的越界
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
