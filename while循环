@@ -7,8 +7,22 @@ while(表达式)                     while（true）
 2）执行“语句组”
 3）转1）
 4）while语句结束，继续执行后面语句
+
 遇到break停止所有循环，直接终止循环，即永久终止循环
 continue终止本次循环，后边代码不会再执行
+
+
+例题：输入若干不超过100的正整数，输出其中最大值，最小值，以及所有数的和。输入的最后一个数是0，标志着输入的结束。
+int sum = 0, max = 0, min = 101, n;
+cin >> n;
+while (n){
+    if (n > max) max = n;
+    if (n < min) min = n;
+    sum += n;
+    cin >> n;
+}
+cout << max << "," << min << "," << sum;
+
 
 int main()
 {
