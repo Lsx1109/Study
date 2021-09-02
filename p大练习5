@@ -1,0 +1,161 @@
+描述
+Pell数列a1, a2, a3, ...的定义是这样的，a1 = 1, a2 = 2, ... , an = 2 * an − 1 + an - 2 (n > 2)。
+给出一个正整数k，要求Pell数列的第k项模上32767是多少。
+输入
+第1行是测试数据的组数n，后面跟着n行输入。每组测试数据占1行，包括一个正整数k (1 ≤ k < 1000000)。
+输出
+n行，每行输出对应一个输入。输出应是一个非负整数。
+#include<iostream>
+using namespace std;
+int k[1000000],N[1000000];
+int main(){
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>k[i];}
+    for(int i=0;i<n;i++){   
+        N[1]=1;
+        N[2]=2;
+        for(int j=3;j<=k[i];j++){
+            N[j]=(2*N[j-1]+N[j-2]);
+            N[j]%=32767;    }
+        cout<<N[k[i]]<<endl;
+        }
+    return 0;
+}
+
+
+描述
+给定两个正整数，求它们的最大公约数。
+输入
+输入一行，包含两个正整数(<1,000,000,000)。
+输出
+输出一个正整数，即这两个正整数的最大公约数。
+#include<iostream>
+using namespace std;
+int main(){
+    int x,y,a,b;
+    cin>>x>>y;
+    while(x){
+        if(x>y){a=x;b=y;}
+        else{a=y;b=x;}
+        x=a%b;
+        y=b; 
+    }
+    cout<<b;
+    return 0;
+} 
+
+
+描述
+写出函数中缺失的部分，使得函数返回值为一个整数,该整数的第i位和m的第i位相同，其他位和n相同。
+请使用【一行代码】补全bitManipulation1函数使得程序能达到上述的功能
+#include <iostream>
+using namespace std;
+int bitManipulation1(int n, int m, int i) {
+// 在此处补充你的代码
+}
+
+int main() {
+	int n, m, i, t;
+	cin >> t;
+	while (t--) { 
+		cin >> n >> m >> i;
+		cout << bitManipulation1(n, m, i) << endl;
+	}
+	return 0;
+}
+输入
+第一行是整数 t，表示测试组数。
+每组测试数据包含一行，是三个整数 n, m 和 i (0<=i<=31)
+输出
+对每组输入数据，每行输出整型变量n变化后的结果
+if(m&(1<<i))return (1<<i)|n;
+    else return (~(1<<i))&n;
+
+  
+描述
+写出函数中缺失的部分，使得函数返回值为一个整数,该整数的第i位是n的第i位取反，其余位和n相同
+请使用【一行代码】补全bitManipulation2函数使得程序能达到上述的功能
+#include <iostream>
+using namespace std;
+int bitManipulation2(int n, int i) {
+// 在此处补充你的代码
+}
+
+int main() {
+	int t, n, i;
+	cin >> t;
+	while (t--) {
+		cin >> n >> i;
+		cout << bitManipulation2(n, i) << endl;
+	}
+	return 0;
+}
+输入
+第一行是整数 t，表示测试组数。
+每组测试数据包含一行，是两个整数 n 和 i (0<=i<=31)。
+输出
+输出整型变量n中的第i位取反的结果
+return(1<<i)^n; 或
+if(n&(1<<i)) return (~(1<<i))&n;
+    else return (1<<i)|n;
+
+
+描述
+写出函数中缺失的部分，使得函数返回值为一个整数,该整数的左边i位是n的左边i位取反，其余位和n相同
+请使用【一行代码】补全bitManipulation3函数使得程序能达到上述的功能
+#include <iostream>
+using namespace std;
+int bitManipulation3(int n, int i) {
+// 在此处补充你的代码
+}
+
+int main() {
+	int t, n, i;
+	cin >> t;
+	while (t--) {
+		cin >> n >> i;
+		cout << bitManipulation3(n, i) << endl;
+	}
+	return 0;
+}
+输入
+第一行是整数 t，表示测试组数。
+每组测试数据包含一行，是两个整数 n 和 i (1<=i<=32)。
+输出
+对每组输入数据，输出整型变量n中左边i位取反的结果。
+return(-1<<(32-i))^n;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
