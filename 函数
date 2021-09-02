@@ -1,0 +1,138 @@
+函数的定义
+返回值类型 函数名(参数1类型  参数1名称，  参数2类型  参数2名称...)
+{
+    语句组(即函数体)
+}
+如果函数不需要返回值，则“返回值类型”可以携程“void”
+
+调用函数：函数名(参数1，参数2...)
+对函数的调用，也是一个表达式。函数调用表达式的值，由函数内部的return语句决定。return语句用法如下：
+return 返回值;
+return语句的功能就是结束函数的执行，并将“返回值”作为返回结果。
+“返回值”是常量，变量或复杂的表达式均可。
+
+如果函数返回值类型为“void”，return语句就直接写 return;
+return语句作为函数的出口，可以在函数中多次出现。多个return语句的“返回值”可以不同。在哪个return语句结束函数的执行，
+函数的返回值就和哪个return语句里面的“返回值”相等。
+
+函数调用语句导致程序进入函数执行，return语句导致程序回到调用语句的后面继续执行
+
+例题：定义Max函数
+#include<iostream>
+using namespace std;
+int Max(int x, int y) //求两个整形变量最大值  x,y形参  4,6实参
+{
+	if (x > y)
+		return x;
+	return y;
+}
+int main()
+{
+	int n = Max(4, 6);
+	cout << n << "," << Max(20, n) << endl;
+	return 0;
+}
+
+判断是否为素数的函数
+#include<iostream>
+using namespace std;
+bool IsPrime(unsigned int n)
+{
+	if (n <= 1)
+		return false;
+	for (int i = 2; i < n; ++i)
+	if (n % i == 0)
+		return false;
+	return true;
+}
+int main()
+{
+	cout << IsPrime(2) << "," << IsPrime(4) << "," << IsPrime(5);
+	return 0;
+}
+
+返回值为void的函数
+void DrawCircle(double x, double y, double r)
+{
+  //下面的代码在屏幕上以(x,y)为圆心，r为半径画圆
+  ...
+  return 0;
+}
+
+给定平面上不共线的三个点，其坐标都是整数，编写程序，求它们构成的三角形的三条边的长度。
+输入是6个整数: x1,y1,x2, y2,x3, y3代表三个点的坐标，以任意顺序输出三条边的长度均可。
+#include<iostream>
+using namespace std;
+#define EPS 0.001 //用来控制精度计算
+double Sqrt(double a)
+{
+	double x = 2 / a, lastX = x + 1 + EPS; //确保能够进行一次迭代
+	while (x - lastX > EPS || lastX - x > EPS) //只要精度没有达到要求，就继续迭代
+	{
+		lastX = x;
+		x = (x + a / x) / 2;
+	}
+	return x;
+}
+double Distance(double x1, double y1, double x2, double y2) //求两点距离公式
+{
+	return Sqrt((x1 - x2)*(x1 - x2) - (y1 - y2)*(y1 - y2));
+}
+int main()
+{
+	int x1, x2, y1, y2, x3, y3;
+	cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+	cout << Distance(x1, y1, x2, y2) << endl;
+	cout << Distance(x1, y1, x3, y3) << endl;
+	cout << Distance(x2, y2, x3, y3) << endl;
+	return 0;
+}
+
+
+函数调用前要有声明即可，不一定要有定义
+int Max(int x, int y);
+double Sqrt(double);
+double Distance(double, double, double);
+参数名称可以省略。函数名称也称为“函数的原型”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
