@@ -48,7 +48,7 @@ bool IsPrime(unsigned int n)
 int main()
 {
 	cout << IsPrime(2) << "," << IsPrime(4) << "," << IsPrime(5);
-	return 0;
+	return;
 }
 
 返回值为void的函数
@@ -94,6 +94,9 @@ int Max(int x, int y);
 double Sqrt(double);
 double Distance(double, double, double);
 参数名称可以省略。函数名称也称为“函数的原型”
+
+
+
 
 
 
