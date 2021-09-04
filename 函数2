@@ -10,6 +10,8 @@ int main()
 
 函数参数的传递
 函数的形参是实参的一个拷贝，且形参的改变不影响实参(除非形参是数组或引用)
+
+
 一维数组作为函数的参数
 数组作为件数参数时，时传引用的，即性参数组改变，实参数组也会改变。
 
@@ -32,3 +34,49 @@ int main()
 	cout << FindMax(a2, sizeof(a2) / sizeof(int)) << endl;
 	return 0;
 }
+
+
+编写一个把int数组所有元素置0的函数
+#include<iostream>
+using namespace std;
+int a1[4] = { 4, 15, 6, 9 };
+void SetToZero(int a[], int length)
+{
+	for (int i = 0; i < length; ++i)
+		a[i] = 0;
+}
+int main()
+{
+	SetToZero(a1, 4);
+	for (int i = 0; i < 4; ++i)
+		cout << a1[i] << ",";
+	return 0;
+}
+
+
+二维数组作为函数的参数
+必须写明数组有多少列，不比写明有多少行
+a[i][j]的地址：数组首地址+i×N×sizeof(a[0][0])+j×sizeof(a[0][0])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
