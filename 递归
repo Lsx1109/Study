@@ -1,0 +1,8 @@
+一个函数自己调用自己就是递归
+int f(int n) //函数返回n的阶乘
+{
+	if (n < 2)
+		return 1; //终止条件
+	else
+		return n * f(n - 1);
+} //cout << f(5); => 120
