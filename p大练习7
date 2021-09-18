@@ -210,6 +210,170 @@ int main()
     return 0;
 }
 
+描述
+编写一个 MyMax函数，可以用来求任何数组中的最大值 使得程序按要求输出
+输入
+第一行是测试数据组数 t
+对每组数据：
+第一行是整数n (1<=n<=10)
+第2行是 n个整数
+第3行是n个浮点数
+输出
+对每组数据：
+先输出n个整数中个位数最大的数(答案保证唯一）
+再输出n个整数中最大的数
+再输出n个浮点数中最大的数
+#include <iostream>
+using namespace std;
+// 在此处补充你的代码
+void * MyMax(void *be,int width,int num,int(*f)(void * ,void * ))
+{
+    void * q=be;
+    for(int i=0;i<num;i++)
+    {
+        if(f(q,(char *)be+width*i)<0)
+        {
+            q=(char *)be+width*i;
+        }
+    }
+    return q;
+}
+int Compare1(void * n1,void * n2)
+{
+    int * p1 = (int * )n1;
+    int * p2 = (int * )n2;
+    return ((*p1)%10) - ((*p2)%10);
+}
+int Compare2(void * n1,void * n2)
+{
+    int * p1 = (int * )n1;
+    int * p2 = (int * )n2;
+    return *p1 - *p2;
+}
+#define eps 1e-6
+int Compare3(void * n1,void * n2)
+{
+    float * p1 = (float * )n1;
+    float * p2 = (float * )n2;
+    if( * p1 - * p2 > eps)
+        return 1;
+    else if(* p2 - * p1 > eps)
+        return -1;
+    else
+        return 0; 
+}
+
+int main()
+{
+    int t;
+    int a[10];
+    float d[10];
+    cin >> t;
+    while(t--) {
+        int n;
+        cin >> n;
+        for(int i = 0;i < n; ++i)
+            cin >> a[i];
+        for(int i = 0;i < n; ++i)
+            cin >> d[i];
+        int * p = (int *) MyMax(a,sizeof(int),n,Compare1);
+        cout << * p << endl;
+        p = (int *) MyMax(a,sizeof(int),n,Compare2);
+        cout << * p << endl;
+        float * pd = (float * )MyMax(d,sizeof(float),n,Compare3);
+        cout << * pd << endl;
+    }
+    return 0;
+}
+
+描述
+程序填空使得输出指定结果
+输入
+无
+输出
+10
+20
+30
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x,y,z;
+    x = 10;
+    y = 20;
+    z = 30;
+    
+    int * a[3]  = { &x, &y,&z};
+    for(
+int * (*p)=a;// 在此处补充你的代码
+p < a + 3; ++p) 
+            cout<< * (*p) << endl;
+    return 0;
+    
+}
+
+描述
+填写内存交换函数 SwapMemory，使得程序输出指定结果
+输入
+无
+输出
+10,20,30,40,50,
+1,2,3,4,5,
+abcde
+12345
+
+#include <iostream>
+using namespace std;
+void SwapMemory(void * m1,void * m2, int size)
+{// 在此处补充你的代码
+char *m11=(char *)m1;
+char *m22=(char *)m2;
+
+    while(size--){
+        *(m11+size)=(*(m22+size))^(*(m11+size));
+        *(m22+size)=(*(m22+size))^(*(m11+size));
+        *(m11+size)=(*(m22+size))^(*(m11+size));}
+}
+
+void PrintIntArray(int * a,int n)
+{
+    for(int i = 0;i < n; ++i)
+        cout << a[i] << ",";
+    cout << endl;
+}
+
+int main()
+{
+    int a[5] = {1,2,3,4,5};
+    int b[5] = {10,20,30,40,50};
+    SwapMemory(a,b,5 * sizeof(int));
+    PrintIntArray(a,5);
+    PrintIntArray(b,5);
+    char s1[] = "12345";
+    char s2[] = "abcde";
+    SwapMemory(s1,s2,5);
+    cout << s1 << endl;
+    cout << s2 << endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
