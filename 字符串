@@ -54,7 +54,46 @@ printf("%s",line)
 在数组长度不足情况下，scanf可能导致数组越界
 char line[5];
 scanf("%s",line);
-若输入"12345"，则数组越界！
+若输入"12345"，则数组越界！//cin和scanf相同
+
+
+读入一行到字符数组
+cin.getline(char buf[], int bufSize);
+读入一行（行长度不超过bufSize-1）或bufSize-1个字符到buf，
+自动添加'\0'回车换行符不会写入buf,但是会从输入流中去掉
+char line[10];
+    cin.getline(line, sizeof(line));
+//或cin.getline(line, 10);最多读入9个字符到line
+cout << line;
+
+gets(char buf[]);
+读入一行，自动添加'\0'
+回车换行符不会写入buf,但是会从输入流中去掉。可能导致数组越界!
+char s[10];
+while(gets(s))
+{
+    printf("%s",s);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
