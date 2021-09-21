@@ -44,6 +44,18 @@ int main()
 	return 0;
 }
 
+用scanf读入字符串
+用scanf可以将字符串读入字符数组scanf会自动添加结尾的'\0'
+scanf读入到空格为止
+char line[100];
+scanf("%s",line) //注意不是&line
+printf("%s",line)
+
+在数组长度不足情况下，scanf可能导致数组越界
+char line[5];
+scanf("%s",line);
+若输入"12345"，则数组越界！
+
 
 
 
