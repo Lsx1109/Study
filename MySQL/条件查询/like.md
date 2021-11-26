@@ -26,6 +26,9 @@
 ## 		找出第三个字母是R的？
 			select ename from emp where ename like '__R%';
 		
+
+
+### 		找出名字中有“_”的？
 		t_student学生表
 		name字段
 		----------------------
@@ -34,8 +37,6 @@
 		wangwu
 		zhaoliu
 		jack_son
-
-### 		找出名字中有“_”的？
 			select name from t_student where name like '%_%'; //这样不行。
 
 			mysql> select name from t_student where name like '%\_%'; // \转义字符。
