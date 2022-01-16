@@ -48,9 +48,7 @@
 			|     10 |  5000.00 |
 			+--------+----------+
 
-			优化策略：
-				where和having，优先选择where，where实在完成不了了，再选择
-				having。
+## 优化策略：where和having，优先选择where，where实在完成不了了，再选择having。
 		where没办法的？？？？
 			找出每个部门平均薪资，要求显示平均薪资高于2500的。
 
