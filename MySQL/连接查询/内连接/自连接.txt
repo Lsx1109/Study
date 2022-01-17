@@ -1,4 +1,5 @@
 ## 内连接之自连接
+
 案例：查询员工的上级领导，要求显示员工名和对应的领导名？
 
 mysql> select empno,ename,mgr from emp;
