@@ -33,4 +33,4 @@ limit怎么用呢？
 	| BLAKE | 2850.00 |
 	+-------+---------+
 
-*注意：mysql当中limit在order by之后执行！！！！！！*
+**注意：mysql当中limit在order by之后执行！！！！！！**
