@@ -16,3 +16,11 @@
 		unique
 		primary key
 		foreign key
+# 主键值建议使用：
+		int
+		bigint
+		char
+		等类型。
+
+		不建议使用：varchar来做主键。主键值一般都是数字，一般都是定长的！
+
