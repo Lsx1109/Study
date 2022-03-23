@@ -19,4 +19,13 @@
         <td>init 0 或halt</td>
         <td>就是直接使用，效果等价于关机</td>
     </tr>
+    <tr>
+        <td rowspan="2">重启</td>
+        <td>shutdown-r now</td>
+        <td>立即重启</td>
+    </tr>
+    <tr>
+        <td>init 6 或reboot</td>
+        <td>重启系统</td>
+    </tr>
 </table>
