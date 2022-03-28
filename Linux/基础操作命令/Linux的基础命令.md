@@ -10,7 +10,8 @@
       shutdown -r 2 
 #### 帮助命令（help）
     ifconfig  --help     //查看 ifconfig 命令的用法
-
+#### 命令说明书（man）
+    man shutdown         //打开命令说明后，可按"q"键退出
 
 ## 目录的相关操作
     .         代表此层目录
