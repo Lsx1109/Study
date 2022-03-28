@@ -1,3 +1,9 @@
+#### 重启系统
+    (1)立刻关机
+      shutdown -h now 或者 poweroff
+    (2)两分钟后关机
+      shutdown -h 2
+
 #### 帮助命令（help）
     ifconfig  --help     //查看 ifconfig 命令的用法
 
