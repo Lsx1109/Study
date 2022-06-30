@@ -8,6 +8,6 @@
 >![](https://img-blog.csdnimg.cn/img_convert/1a34731dfc2631d09140e945fbf598ff.png)  
 >**如果系统中只有一个管理员用户，则无法将其更改为标准用户。**
 ## 本地用户的创建
->- **方法一**
+>- **方法一**  
 >![](https://img-blog.csdnimg.cn/img_convert/2c2b93b7cc775877edb9b42fc2877aec.png)
 
