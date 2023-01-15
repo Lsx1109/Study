@@ -1,6 +1,6 @@
 # union合并查询结果集
 
-案例：查询工作岗位是MANAGER和SALESMAN的员工？
+    案例：查询工作岗位是MANAGER和SALESMAN的员工？
 	select ename,job from emp where job = 'MANAGER' or job = 'SALESMAN';
 	select ename,job from emp where job in('MANAGER','SALESMAN');
 	+--------+----------+
