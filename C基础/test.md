@@ -1,23 +1,12 @@
-graph TD
-    A[用户输入 num1, num2, num3] -->|输入| B[比较 num1, num2, num3]
-    B -->|num1 >= num2 && num1 >= num3| C1{ }
-    C1 -->|true| D1[num1 >= num2]
-    D1 -->|true| E1[输出 num1, num2, num3]
-    D1 -->|false| F1[输出 num1, num3, num2]
-    C1 -->|false| G1[num2 >= num3]
-    G1 -->|true| H1[输出 num2, num3, num1]
-    G1 -->|false| I1[输出 num3, num2, num1]
-    B -->|num2 >= num1 && num2 >= num3| C2{ }
-    C2 -->|true| D2[num2 >= num1]
-    D2 -->|true| E2[输出 num2, num1, num3]
-    D2 -->|false| F2[输出 num2, num3, num1]
-    C2 -->|false| G2[num1 >= num3]
-    G2 -->|true| H2[输出 num1, num3, num2]
-    G2 -->|false| I2[输出 num3, num1, num2]
-    B -->|num3 >= num1 && num3 >= num2| C3{ }
-    C3 -->|true| D3[num3 >= num1]
-    D3 -->|true| E3[输出 num3, num1, num2]
-    D3 -->|false| F3[输出 num3, num2, num1]
-    C3 -->|false| G3[num1 >= num2]
-    G3 -->|true| H3[输出 num1, num2, num3]
-    G3 -->|false| I3[输出 num2, num1, num3]
+# C 代码流程图
+
+```mermaid
+graph TD;
+  A[开始] -->|输入排名| B[读取排名]
+  B -->|排名除以10| C[开关(rank/10)]
+  C -- 10 -->|情况 10 或 9| D[打印 "优"]
+  C -- 9 -->|情况 8| E[打印 "良"]
+  C -- 8 -->|情况 7| F[打印 "中"]
+  C -- 7 -->|情况 6| G[打印 "及格"]
+  C -- * -->|默认| H[打印 "不及格"]
+  H --> I[结束]
